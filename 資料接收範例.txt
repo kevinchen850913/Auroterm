@@ -1,0 +1,40 @@
+Aurotek Corp. MCN8532P Boot Loader
+App image copy done!
+Jumping to StarterWare Application...
+
+boardname: 噢噢噢噢 version: 噢噢
+
+SYS/BIOS EcMaster Sample application
+0000000407: Full command line: -auxclk 1000 -v 3 -t 0 -perf -cpsw 1 1 1 m bone
+0000000407: Run demo now with cycle time 1000 usec
+0000000407: Using AuxClock
+0000000407: OsMeasGet100kHzFrequency(): 720 MHz
+0000000407: EMG: Enabled, ActivePolarity=High
+0000000411: ==========================
+0000000411: Initialize EtherCAT Master
+0000000411: ==========================
+0000000411: EC-Master V3.0.3.11 (Protected) for SYSBIOS Copyright acontis technologies GmbH @ 2020
+0000000440: mdio ACK missing
+0000000440: PHY initialization failed
+0000000442: EtherCAT network adapter MAC: 30-45-11-D8-1C-E7
+0000000442: The license key doesn’t match to the MAC Address.
+0000000524: Protected version, stop sending ethernet frames after 60 minutes if not licensed!
+0000000531: Scan bus mismatch for the first slave on bus
+0000000531: Expected Slave: Unknown (0x6004), Aurotek Corporation (0x77d)
+0000000531: Found Slave...: ----
+0000000531: Cannot scan bus: ERROR: Ethernet link cable disconnected (0x9811002d)
+0000000531: ========================
+0000000531: Shutdown EtherCAT Master
+0000000531: ========================
+0000000532: ============================================================================
+0000000532: PerfMsmt 'JOB_ProcessAllRxFrames' (min/avg/max) [usec]:    0.3/   6.9/  12.2
+0000000532: PerfMsmt 'JOB_SendAllCycFrames  ' (min/avg/max) [usec]:    0.2/   3.1/  14.1
+0000000532: PerfMsmt 'JOB_MasterTimer       ' (min/avg/max) [usec]:    0.2/  17.6/ 142.7
+0000000532: PerfMsmt 'JOB_SendAcycFrames    ' (min/avg/max) [usec]:    0.2/   2.4/   4.3
+0000000532: PerfMsmt 'Cycle Time            ' (min/avg/max) [usec]:  514.9/ 738.3/1008.5
+0000000532: PerfMsmt 'myAppWorkPd           ' (min/avg/max) [usec]:    0.3/   3.3/   5.5
+0000000532: PerfMsmt 'Write DCM logfile     ' (min/avg/max) [usec]:    0.2/   2.0/  10.8
+0000000532: PerfMsmt 'MC Calc Val 1         ' (min/avg/max) [usec]:       /      /
+0000000532: PerfMsmt 'MC Calc Val 2         ' (min/avg/max) [usec]:       /      /
+0000000532: PerfMsmt 'MC Calc Val 3         ' (min/avg/max) [usec]:       /      /
+0000000831: EcMasterDemoMotion stop.
