@@ -27,11 +27,6 @@ namespace Auroterm
             {
                 cmb_PortName.Items.Add(Name);
             }
-            InstalledFontCollection installedFontCollection = new InstalledFontCollection();
-            foreach (FontFamily fontFamilie in installedFontCollection.Families)
-            {
-                cmb_familyName.Items.Add(fontFamilie.Name);
-            }
             tb_Upgrade_Path.Text = Directory.GetCurrentDirectory();
             timer1.Enabled = true;
         }
@@ -103,27 +98,6 @@ namespace Auroterm
             }
         }
 
-        private void bt_TextBox_update_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                float f = 9;
-                if (float.TryParse(tb_textBoxEmSize.Text, out f))
-                {
-                    Font font = new Font(cmb_familyName.SelectedItem.ToString(), f, FontStyle.Regular, GraphicsUnit.Point);
-                    textBox1.Font = font;
-                }
-                else
-                {
-                    MessageBox.Show("TextBox update fail!");
-                }
-            }
-            catch (Exception eUpdatefont)
-            {
-                MessageBox.Show("TextBox update fail!");
-            }
-        }
-
         private void btn_Upgrade_SetPath_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog folderBrowserDialog1 = new FolderBrowserDialog();
@@ -135,12 +109,7 @@ namespace Auroterm
 
         private void btn_Upgrade_Start_Click(object sender, EventArgs e)
         {
-            if (!SerialPort1.IsOpen)
-            {
-                MessageBox.Show("SerialPort is close!");
-                return;
-            }
-            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade"))
+            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade.exe"))
             {
                 MessageBox.Show("Not found Upgrade");
                 return;
@@ -156,7 +125,12 @@ namespace Auroterm
         DateTime dt;
         private void btn_Upgrade_AutoStart_Click(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade"))
+            if (!SerialPort1.IsOpen)
+            {
+                MessageBox.Show("SerialPort is close!");
+                return;
+            }
+            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade.exe"))
             {
                 MessageBox.Show("Not found Upgrade");
                 return;
@@ -194,7 +168,7 @@ namespace Auroterm
             {
                 using (StreamWriter sw = new StreamWriter(sfd.FileName))
                 {
-                    sw.Write(SerialPort1.ReadBuffer);
+                    sw.Write(textBox1.Text);
                 }
             }
         }
@@ -269,6 +243,33 @@ namespace Auroterm
         private void ThreadTaskStartUpgradeDLL()
         {
             Upgrade_DLL.Start_DLL(Convert.ToInt32(tb_Upgrade_boardNo.Text));
+        }
+
+        private void bt_textBoxBackColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.BackColor = dlg.Color;
+            }
+        }
+
+        private void bt_textBoxForeColor_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlg = new ColorDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.ForeColor = dlg.Color;
+            }
+        }
+
+        private void bt_textBoxFont_Click(object sender, EventArgs e)
+        {
+            FontDialog dlg = new FontDialog();
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                textBox1.Font = dlg.Font;
+            }  
         }
     }
 }
