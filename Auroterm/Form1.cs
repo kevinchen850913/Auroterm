@@ -190,18 +190,19 @@ namespace Auroterm
 
         private void btn_UpgradeDLL_Start_Click(object sender, EventArgs e)
         {
-            if (!System.IO.File.Exists(Directory.GetCurrentDirectory() + @"\Upgrade_DLL.dll"))
+            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade_DLL.dll"))
             {
                 MessageBox.Show("Not found Upgrade_DLL");
                 return;
             }
-            if (!System.IO.File.Exists(Directory.GetCurrentDirectory() + @"\app"))
+            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\app"))
             {
                 MessageBox.Show("Not found app");
                 return;
             }
             Thread trd = new Thread(new ThreadStart(ThreadTaskStartUpgradeDLL));
             trd.Start();
+            timer1.Tick += new EventHandler(m_UpgradeDLL_Check2);
         }
 
         private void btn_UpgradeDLL_AutoStart_Click(object sender, EventArgs e)
@@ -211,7 +212,7 @@ namespace Auroterm
                 MessageBox.Show("SerialPort is close!");
                 return;
             }
-            if (!System.IO.File.Exists(Directory.GetCurrentDirectory() + @"\Upgrade_DLL.dll"))
+            if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade_DLL.dll"))
             {
                 MessageBox.Show("Not found Upgrade_DLL");
                 return;
@@ -230,6 +231,7 @@ namespace Auroterm
             if (!MCT8132PTable.Isstop)
             {
                 timer1.Tick -= new EventHandler(m_UpgradeDLL_Check);
+                timer1.Tick += new EventHandler(m_UpgradeDLL_Check2);
                 Thread trd = new Thread(new ThreadStart(ThreadTaskStartUpgradeDLL));
                 trd.Start();
             }
@@ -238,6 +240,24 @@ namespace Auroterm
                 timer1.Tick -= new EventHandler(m_UpgradeDLL_Check);
                 MessageBox.Show("AutoStart(DLL) is Timeout!");
             }
+        }
+
+        private void m_UpgradeDLL_Check2(object sender, EventArgs e)
+        {
+
+            if (Upgrade_DLL.CheckStart() < 1)
+            {
+                timer1.Tick -= new EventHandler(m_UpgradeDLL_Check2);
+                if (Upgrade_DLL.CheckStart() == 0)
+                {
+                    MessageBox.Show("Upgrade is success!");
+                }
+                else 
+                {
+                    MessageBox.Show("Upgrade is fail! " + Upgrade_DLL.CheckStart().ToString());
+                }             
+            }
+            
         }
 
         private void ThreadTaskStartUpgradeDLL()

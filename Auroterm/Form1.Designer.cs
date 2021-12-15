@@ -304,7 +304,7 @@
             // 
             this.cmb_PortName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_PortName.FormattingEnabled = true;
-            this.cmb_PortName.Location = new System.Drawing.Point(109, 49);
+            this.cmb_PortName.Location = new System.Drawing.Point(109, 51);
             this.cmb_PortName.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_PortName.Name = "cmb_PortName";
             this.cmb_PortName.Size = new System.Drawing.Size(369, 24);

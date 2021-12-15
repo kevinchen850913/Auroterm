@@ -4,7 +4,6 @@ using System.Text;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
 
-
 namespace Auroterm
 {
     static class Upgrade
@@ -34,12 +33,19 @@ namespace Auroterm
 
     static class Upgrade_DLL
     {
+        private static int StartErr = 1;
     [DllImport("Upgrade_DLL.dll")]
         private static extern int Start(int BoardNo);
 
         public static void Start_DLL(int BoardNo)
         {
-            int i = Start(BoardNo);
+            StartErr = 1;
+            StartErr = Start(BoardNo);
+        }
+
+        public static int CheckStart()
+        {
+            return StartErr;
         }
     }
 }
