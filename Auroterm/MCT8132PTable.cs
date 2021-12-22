@@ -27,9 +27,13 @@ namespace Auroterm
         public static double EtherCAT;
 
         private static string[] LineBuffer ;
+        public static string Text = "";
+
         public static void update(string Line)
         {
-            LineBuffer = Line.Trim('\r').Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            Text += Line.Trim('\r');
+            LineBuffer = Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+            Text += "\r\n";
             Check();
         }
 
