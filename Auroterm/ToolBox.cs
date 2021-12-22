@@ -26,7 +26,6 @@ namespace Auroterm
 
             /* 關閉命令提示字元 */
             console.StandardInput.WriteLine("exit");
-
             console.Close();
         }
     }

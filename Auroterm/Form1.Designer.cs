@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -136,8 +137,7 @@
             this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.textBox1.Size = new System.Drawing.Size(518, 523);
             this.textBox1.TabIndex = 0;
-            this.textBox1.MouseLeave += new System.EventHandler(this.textBox1_MouseLeave);
-            this.textBox1.MouseEnter += new System.EventHandler(this.textBox1_MouseEnter);
+            this.textBox1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.textBox1_MouseDoubleClick);
             // 
             // timer1
             // 
@@ -304,7 +304,7 @@
             // 
             this.cmb_PortName.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cmb_PortName.FormattingEnabled = true;
-            this.cmb_PortName.Location = new System.Drawing.Point(109, 51);
+            this.cmb_PortName.Location = new System.Drawing.Point(109, 49);
             this.cmb_PortName.Margin = new System.Windows.Forms.Padding(4);
             this.cmb_PortName.Name = "cmb_PortName";
             this.cmb_PortName.Size = new System.Drawing.Size(369, 24);
@@ -686,7 +686,7 @@
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(233, 16);
             this.label5.TabIndex = 1;
-            this.label5.Text = "Isstop";
+            this.label5.Text = "Stop";
             // 
             // tb_Isstop
             // 
@@ -1012,6 +1012,7 @@
             this.ClientSize = new System.Drawing.Size(534, 561);
             this.Controls.Add(this.tabControl1);
             this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.Text = "Auroterm";

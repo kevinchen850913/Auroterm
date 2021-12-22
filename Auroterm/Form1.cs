@@ -173,14 +173,9 @@ namespace Auroterm
             }
         }
 
-        private void textBox1_MouseEnter(object sender, EventArgs e)
+        private void textBox1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-            MouseInTextBox = true;
-        }
-
-        private void textBox1_MouseLeave(object sender, EventArgs e)
-        {
-            MouseInTextBox = false;           
+            MouseInTextBox = !MouseInTextBox;
         }
 
         private void bt_Clear_Click(object sender, EventArgs e)
@@ -291,5 +286,6 @@ namespace Auroterm
                 textBox1.Font = dlg.Font;
             }  
         }
+
     }
 }
