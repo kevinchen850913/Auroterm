@@ -28,12 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.bt_Properties = new System.Windows.Forms.ToolStripLabel();
             this.bt_SerialPort = new System.Windows.Forms.ToolStripLabel();
-            this.bt_MCT8132PTable = new System.Windows.Forms.ToolStripLabel();
+            this.bt_Table_MCT8132P = new System.Windows.Forms.ToolStripLabel();
             this.bt_ToolBox = new System.Windows.Forms.ToolStripLabel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -42,11 +44,11 @@
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.bt_Properties,
             this.bt_SerialPort,
-            this.bt_MCT8132PTable,
+            this.bt_Table_MCT8132P,
             this.bt_ToolBox});
             this.toolStrip1.Location = new System.Drawing.Point(0, 0);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(695, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1184, 25);
             this.toolStrip1.TabIndex = 3;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -64,12 +66,12 @@
             this.bt_SerialPort.Text = "SerialPort";
             this.bt_SerialPort.Click += new System.EventHandler(this.bt_SerialPort_Click);
             // 
-            // bt_MCT8132PTable
+            // bt_Table_MCT8132P
             // 
-            this.bt_MCT8132PTable.Name = "bt_MCT8132PTable";
-            this.bt_MCT8132PTable.Size = new System.Drawing.Size(45, 22);
-            this.bt_MCT8132PTable.Text = " Table ";
-            this.bt_MCT8132PTable.Click += new System.EventHandler(this.bt_MCT8132PTable_Click);
+            this.bt_Table_MCT8132P.Name = "bt_Table_MCT8132P";
+            this.bt_Table_MCT8132P.Size = new System.Drawing.Size(45, 22);
+            this.bt_Table_MCT8132P.Text = " Table ";
+            this.bt_Table_MCT8132P.Click += new System.EventHandler(this.bt_Table_MCT8132P_Click);
             // 
             // bt_ToolBox
             // 
@@ -78,11 +80,16 @@
             this.bt_ToolBox.Text = "ToolBox";
             this.bt_ToolBox.Click += new System.EventHandler(this.bt_ToolBox_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(695, 561);
+            this.ClientSize = new System.Drawing.Size(1184, 761);
             this.Controls.Add(this.toolStrip1);
             this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -103,8 +110,9 @@
         private System.Windows.Forms.ToolStrip toolStrip1;
         private System.Windows.Forms.ToolStripLabel bt_Properties;
         private System.Windows.Forms.ToolStripLabel bt_SerialPort;
-        private System.Windows.Forms.ToolStripLabel bt_MCT8132PTable;
+        private System.Windows.Forms.ToolStripLabel bt_Table_MCT8132P;
         private System.Windows.Forms.ToolStripLabel bt_ToolBox;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

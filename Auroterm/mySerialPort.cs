@@ -8,7 +8,6 @@ namespace Auroterm
     class mySerialPort : System.IO.Ports.SerialPort
     {
         string[] MCT8132P = new string[7];
-        public string ReadBuffer = "";
         public string LineBuffer = "";
         public bool Auroterm_Open(string portName)
         {
@@ -55,9 +54,7 @@ namespace Auroterm
             LineBuffer = ReadLine();
             if (LineBuffer.Length > 1)
             {
-                ReadBuffer += LineBuffer.Trim('\r');
-                ReadBuffer += "\r\n";
-                MCT8132PTable.update(LineBuffer);
+                Table_SerialPort.update(LineBuffer);
             }            
         }
     }

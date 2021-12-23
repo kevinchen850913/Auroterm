@@ -13,6 +13,8 @@ namespace Auroterm
 {
     public partial class Form1 : Form
     {
+        mySerialPort SerialPort1 = new mySerialPort();
+
         public Form1()
         {
             InitializeComponent();
@@ -37,11 +39,11 @@ namespace Auroterm
             FormSerialPort1.Show();
         }
 
-        private void bt_MCT8132PTable_Click(object sender, EventArgs e)
+        private void bt_Table_MCT8132P_Click(object sender, EventArgs e)
         {
-            Form_MCT8132PTable FormMCT8132PTable1 = new Form_MCT8132PTable();
-            FormMCT8132PTable1.MdiParent = this;
-            FormMCT8132PTable1.Show();
+            Form_MCT8132P FormTable_MCT8132P1 = new Form_MCT8132P();
+            FormTable_MCT8132P1.MdiParent = this;
+            FormTable_MCT8132P1.Show();
         }
 
         private void bt_ToolBox_Click(object sender, EventArgs e)
@@ -49,6 +51,22 @@ namespace Auroterm
             Form_ToolBox FormToolBox1 = new Form_ToolBox();
             FormToolBox1.MdiParent = this;
             FormToolBox1.Show();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(Table_SerialPort.Trigger_Open)
+            {
+                SerialPort1.Auroterm_Open(Table_SerialPort.PortName);
+                Table_SerialPort.Trigger_Open = false;
+                Table_SerialPort.IsOpen = SerialPort1.IsOpen;
+            }
+            if (Table_SerialPort.Trigger_Close)
+            {
+                SerialPort1.Close();
+                Table_SerialPort.Trigger_Close = false;
+                Table_SerialPort.IsOpen = SerialPort1.IsOpen;
+            }
         }
     }
 }

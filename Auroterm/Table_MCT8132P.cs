@@ -4,14 +4,13 @@ using System.Text;
 
 namespace Auroterm
 {
-    static class MCT8132PTable
+    static class Table_MCT8132P
     {
         public static string EtherCATMaster = "unknown";
         public static string boardname;
         public static string version;
         public static string MAC;
         public static bool linkcable;
-
         public static bool Isstop = true;
 
         public static double JOB_ProcessAllRxFrames;
@@ -21,7 +20,6 @@ namespace Auroterm
         public static double JOB_CycleTime;
         public static double myAppWorkPd;
         public static double WriteDCMlogfile;
-
         public static double MCU;
         public static double APP;
         public static double EtherCAT;
@@ -32,8 +30,8 @@ namespace Auroterm
         public static void update(string Line)
         {
             Text += Line.Trim('\r');
-            LineBuffer = Text.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             Text += "\r\n";
+            LineBuffer = Line.Trim('\r').Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
             Check();
         }
 
@@ -109,17 +107,14 @@ namespace Auroterm
                 {
                     //Aurotek Corp. MCN8532P Boot Loader
                     EtherCATMaster = "Boot";
-                    return;
                 }
                 else if (LineBuffer[0] == "boardname:")
                 {
                     //boardname: ?????? version: ???
                     boardname = LineBuffer[1];
                     version = LineBuffer[3];
-                    return;
                 }
-            }
-            
+            }       
             return;
         }
     }
