@@ -23,6 +23,7 @@ namespace Auroterm
             {
                 cmb_PortName.Items.Add(Name);
             }
+            cmb_PortName.SelectedItem = Table_SerialPort.PortName;
         }
 
         private void bt_textBoxFont_Click(object sender, EventArgs e)
@@ -31,6 +32,7 @@ namespace Auroterm
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 Table_SerialPort.font = dlg.Font;
+                Table_SerialPort.Trigger_Font = true;
             }  
         }
 
@@ -40,6 +42,7 @@ namespace Auroterm
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 Table_SerialPort.ForeColor = dlg.Color;
+                Table_SerialPort.Trigger_ForeColor = true;
             }
         }
 
@@ -49,6 +52,7 @@ namespace Auroterm
             if (dlg.ShowDialog() == DialogResult.OK)
             {
                 Table_SerialPort.BackColor = dlg.Color;
+                Table_SerialPort.Trigger_BackColor = true;
             }
         }
 
@@ -70,7 +74,7 @@ namespace Auroterm
 
         private void bt_Clear_Click(object sender, EventArgs e)
         {
-            //textBox1.Clear();
+            Table_SerialPort.Clear();
         }
 
         private void bt_FileSave_Click(object sender, EventArgs e)
@@ -83,7 +87,7 @@ namespace Auroterm
             {
                 using (StreamWriter sw = new StreamWriter(sfd.FileName))
                 {
-                    //sw.Write(textBox1.Text);
+                    sw.Write(Table_SerialPort.Text);
                 }
             }
         }

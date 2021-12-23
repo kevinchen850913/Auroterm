@@ -11,6 +11,10 @@ namespace Auroterm
         //mySerialPort的內容應該要改到這裡
         public static bool Trigger_Open;
         public static bool Trigger_Close;
+        public static bool Trigger_Font;
+        public static bool Trigger_ForeColor;
+        public static bool Trigger_BackColor;
+        public static bool Trigger_Clear;
 
         public static String PortName;
         public static int BaudRate = 115200;
@@ -33,6 +37,12 @@ namespace Auroterm
             Line = Line.Trim('\r') ;
             Text = Text + Line + "\r\n";
             Table_MCT8132P.update(Line);
+        }
+
+        public static void Clear()
+        {
+            Text = "";
+            Trigger_Clear = true;
         }
     }
 }

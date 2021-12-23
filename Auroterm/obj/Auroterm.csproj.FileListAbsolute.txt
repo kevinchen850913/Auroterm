@@ -15,9 +15,10 @@ D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.csproj.Genera
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.exe
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.pdb
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.Form_SerialPort.resources
-D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.Form_MCT8132PTable.resources
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.Form_ToolBox.resources
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Debug\Auroterm.Form_SerialPort.resources
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Debug\Auroterm.Form_ToolBox.resources
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Debug\Auroterm.Form_Properties.resources
 D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Debug\Auroterm.Form_MCT8132P.resources
+D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.Form_Properties.resources
+D:\u2260\VS2005_Project\Auroterm\Auroterm\obj\x64\Release\Auroterm.Form_MCT8132P.resources

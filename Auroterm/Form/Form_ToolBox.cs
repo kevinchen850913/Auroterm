@@ -51,11 +51,11 @@ namespace Auroterm
 
         private void btn_UpgradeDLL_AutoStart_Click(object sender, EventArgs e)
         {
-            //if (!SerialPort1.IsOpen)
-            //{
-            //    MessageBox.Show("SerialPort is close!");
-            //    return;
-            //}
+            if (!Table_SerialPort.IsOpen)
+            {
+                MessageBox.Show("SerialPort is close!");
+                return;
+            }
             if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade_DLL.dll"))
             {
                 MessageBox.Show("Not found Upgrade_DLL");
@@ -87,11 +87,11 @@ namespace Auroterm
 
         private void btn_Upgrade_AutoStart_Click(object sender, EventArgs e)
         {
-            //if (!SerialPort1.IsOpen)
-            //{
-            //    MessageBox.Show("SerialPort is close!");
-            //    return;
-            //}
+            if (!Table_SerialPort.IsOpen)
+            {
+                MessageBox.Show("SerialPort is close!");
+                return;
+            }
             if (!System.IO.File.Exists(tb_Upgrade_Path.Text + @"\Upgrade.exe"))
             {
                 MessageBox.Show("Not found Upgrade");
@@ -108,6 +108,7 @@ namespace Auroterm
 
         private void m_Upgrade_Check(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
             if (!Table_MCT8132P.Isstop)
             {
                 timer1.Tick -= new EventHandler(m_Upgrade_Check);
@@ -118,10 +119,12 @@ namespace Auroterm
                 timer1.Tick -= new EventHandler(m_Upgrade_Check);
                 MessageBox.Show("AutoStart is Timeout!");
             }
+            timer1.Enabled = true;
         }
 
         private void m_UpgradeDLL_Check(object sender, EventArgs e)
         {
+            timer1.Enabled = false;
             if (!Table_MCT8132P.Isstop)
             {
                 timer1.Tick -= new EventHandler(m_UpgradeDLL_Check);
@@ -134,6 +137,7 @@ namespace Auroterm
                 timer1.Tick -= new EventHandler(m_UpgradeDLL_Check);
                 MessageBox.Show("AutoStart(DLL) is Timeout!");
             }
+            timer1.Enabled = true;
         }
 
         private void m_UpgradeDLL_Check2(object sender, EventArgs e)

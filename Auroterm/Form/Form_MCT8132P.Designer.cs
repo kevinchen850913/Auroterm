@@ -460,7 +460,7 @@
             this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.tableLayoutPanel13);
             this.Font = new System.Drawing.Font("新細明體", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form_MCT8132P";
             this.Text = "Table_MCT8132P";
             this.Load += new System.EventHandler(this.Form_Table_MCT8132P_Load);
