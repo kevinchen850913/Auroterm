@@ -51,7 +51,7 @@ namespace Auroterm
 
         private void btn_UpgradeDLL_AutoStart_Click(object sender, EventArgs e)
         {
-            if (!Table_SerialPort.IsOpen)
+            if (!SerialPort.IsOpen)
             {
                 MessageBox.Show("SerialPort is close!");
                 return;
@@ -87,7 +87,7 @@ namespace Auroterm
 
         private void btn_Upgrade_AutoStart_Click(object sender, EventArgs e)
         {
-            if (!Table_SerialPort.IsOpen)
+            if (!SerialPort.IsOpen)
             {
                 MessageBox.Show("SerialPort is close!");
                 return;

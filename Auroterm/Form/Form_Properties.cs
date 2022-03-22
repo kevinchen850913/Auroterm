@@ -23,7 +23,7 @@ namespace Auroterm
             {
                 cmb_PortName.Items.Add(Name);
             }
-            cmb_PortName.SelectedItem = Table_SerialPort.PortName;
+            cmb_PortName.SelectedItem = SerialPort.PortName;
         }
 
         private void bt_textBoxFont_Click(object sender, EventArgs e)
@@ -31,8 +31,8 @@ namespace Auroterm
             FontDialog dlg = new FontDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Table_SerialPort.font = dlg.Font;
-                Table_SerialPort.Trigger_Font = true;
+                SerialPort.font = dlg.Font;
+                SerialPort.Trigger_Font = true;
             }  
         }
 
@@ -41,8 +41,8 @@ namespace Auroterm
             ColorDialog dlg = new ColorDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Table_SerialPort.ForeColor = dlg.Color;
-                Table_SerialPort.Trigger_ForeColor = true;
+                SerialPort.ForeColor = dlg.Color;
+                SerialPort.Trigger_ForeColor = true;
             }
         }
 
@@ -51,8 +51,8 @@ namespace Auroterm
             ColorDialog dlg = new ColorDialog();
             if (dlg.ShowDialog() == DialogResult.OK)
             {
-                Table_SerialPort.BackColor = dlg.Color;
-                Table_SerialPort.Trigger_BackColor = true;
+                SerialPort.BackColor = dlg.Color;
+                SerialPort.Trigger_BackColor = true;
             }
         }
 
@@ -63,18 +63,18 @@ namespace Auroterm
 
         private void bt_SerialPort_Open_Click(object sender, EventArgs e)
         {
-            Table_SerialPort.PortName = cmb_PortName.SelectedItem.ToString();
-            Table_SerialPort.Trigger_Open = true;
+            SerialPort.PortName = cmb_PortName.SelectedItem.ToString();
+            SerialPort.Trigger_Open = true;
         }
 
         private void bt_SerialPort_Close_Click(object sender, EventArgs e)
         {
-            Table_SerialPort.Trigger_Close = true;
+            SerialPort.Trigger_Close = true;
         }
 
         private void bt_Clear_Click(object sender, EventArgs e)
         {
-            Table_SerialPort.Clear();
+            SerialPort.Clear();
         }
 
         private void bt_FileSave_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace Auroterm
             {
                 using (StreamWriter sw = new StreamWriter(sfd.FileName))
                 {
-                    sw.Write(Table_SerialPort.Text);
+                    sw.Write(SerialPort.Text);
                 }
             }
         }

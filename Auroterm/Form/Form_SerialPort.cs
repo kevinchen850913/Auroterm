@@ -22,31 +22,31 @@ namespace Auroterm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (Table_SerialPort.IsOpen && !IsStop)
+            if (SerialPort.IsOpen && !IsStop)
             {
-                textBox1.Text = Table_SerialPort.Text;
+                textBox1.Text = SerialPort.Text;
                 textBox1.SelectionStart = textBox1.Text.Length;
                 textBox1.ScrollToCaret();
             }
-            if (Table_SerialPort.Trigger_Clear)
+            if (SerialPort.Trigger_Clear)
             {
-                textBox1.Text = Table_SerialPort.Text;
-                Table_SerialPort.Trigger_Clear = false;
+                textBox1.Text = SerialPort.Text;
+                SerialPort.Trigger_Clear = false;
             }
-            if (Table_SerialPort.Trigger_Font)
+            if (SerialPort.Trigger_Font)
             {
-                textBox1.Font = Table_SerialPort.font;
-                Table_SerialPort.Trigger_Font = false;
+                textBox1.Font = SerialPort.font;
+                SerialPort.Trigger_Font = false;
             }
-            if (Table_SerialPort.Trigger_ForeColor)
+            if (SerialPort.Trigger_ForeColor)
             {
-                textBox1.ForeColor = Table_SerialPort.ForeColor;
-                Table_SerialPort.Trigger_ForeColor = false;
+                textBox1.ForeColor = SerialPort.ForeColor;
+                SerialPort.Trigger_ForeColor = false;
             }
-            if (Table_SerialPort.Trigger_BackColor)
+            if (SerialPort.Trigger_BackColor)
             {
-                textBox1.BackColor = Table_SerialPort.BackColor;
-                Table_SerialPort.Trigger_BackColor = false;
+                textBox1.BackColor = SerialPort.BackColor;
+                SerialPort.Trigger_BackColor = false;
             }
         }
 

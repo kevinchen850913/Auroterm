@@ -81,17 +81,17 @@ namespace Auroterm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(Table_SerialPort.Trigger_Open)
+            if(SerialPort.Trigger_Open)
             {
-                SerialPort1.Auroterm_Open(Table_SerialPort.PortName);
-                Table_SerialPort.Trigger_Open = false;
-                Table_SerialPort.IsOpen = SerialPort1.IsOpen;
+                SerialPort1.Auroterm_Open(SerialPort.PortName);
+                SerialPort.Trigger_Open = false;
+                SerialPort.IsOpen = SerialPort1.IsOpen;
             }
-            if (Table_SerialPort.Trigger_Close)
+            if (SerialPort.Trigger_Close)
             {
                 SerialPort1.Close();
-                Table_SerialPort.Trigger_Close = false;
-                Table_SerialPort.IsOpen = SerialPort1.IsOpen;
+                SerialPort.Trigger_Close = false;
+                SerialPort.IsOpen = SerialPort1.IsOpen;
             }
         }
     }

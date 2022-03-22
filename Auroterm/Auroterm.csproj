@@ -77,9 +77,6 @@
     <Compile Include="Form\Form_ToolBox.Designer.cs">
       <DependentUpon>Form_ToolBox.cs</DependentUpon>
     </Compile>
-    <Compile Include="mySerialPort.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Table_MCT8132P.cs" />
     <Compile Include="Form\Form_MCT8132P.cs">
       <SubType>Form</SubType>
@@ -128,7 +125,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Compile Include="Table_SerialPort.cs" />
+    <Compile Include="SerialPort.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ToolBox.cs" />
   </ItemGroup>
   <ItemGroup>
