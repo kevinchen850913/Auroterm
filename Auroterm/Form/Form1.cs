@@ -22,7 +22,7 @@ namespace Auroterm
 
         private void Form1_Load(object sender, EventArgs e)
         {
-
+            
         }
         private bool FindForm(string formName)
         {

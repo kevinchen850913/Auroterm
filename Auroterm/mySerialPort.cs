@@ -9,12 +9,9 @@ namespace Auroterm
     {
         string[] MCT8132P = new string[7];
         public string LineBuffer = "";
-        public bool Auroterm_Open(string portName)
+
+        public mySerialPort()
         {
-            if (IsOpen)
-            {
-                Close();
-            }
             BaudRate = 115200;
             ReceivedBytesThreshold = 1;
             Parity = Parity.None;
@@ -22,10 +19,18 @@ namespace Auroterm
             DataBits = 8;
             Handshake = Handshake.None;
             NewLine = "\n";
-            PortName = portName;
             DataReceived += new System.IO.Ports.SerialDataReceivedEventHandler(m_Receive);
+        }
+
+        public bool Auroterm_Open(string portName)
+        {
             try
             {
+                PortName = portName;
+                if (IsOpen)
+                {
+                    Close();
+                }
                 Open();
             }
             catch (Exception eOpen)
@@ -55,7 +60,7 @@ namespace Auroterm
             if (LineBuffer.Length > 1)
             {
                 Table_SerialPort.update(LineBuffer);
-            }            
+            }
         }
     }
 }
