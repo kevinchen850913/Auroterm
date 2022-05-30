@@ -10,9 +10,11 @@ namespace Auroterm
 {
     public partial class Form_MCT8132P : Form
     {
-        public Form_MCT8132P()
+        mySystem mySys;
+        public Form_MCT8132P(mySystem m_mySys)
         {
             InitializeComponent();
+            mySys = m_mySys;
         }
 
         private void Form_Table_MCT8132P_Load(object sender, EventArgs e)

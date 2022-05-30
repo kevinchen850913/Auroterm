@@ -13,9 +13,11 @@ namespace Auroterm
     public partial class Form_ToolBox : Form
     {
         DateTime dt;
-        public Form_ToolBox()
+        mySystem mySys;
+        public Form_ToolBox(mySystem m_mySys)
         {
             InitializeComponent();
+            mySys = m_mySys;
         }
 
         private void Form_ToolBox_Load(object sender, EventArgs e)
@@ -51,7 +53,7 @@ namespace Auroterm
 
         private void btn_UpgradeDLL_AutoStart_Click(object sender, EventArgs e)
         {
-            if (!SerialPort.IsOpen)
+            if (!mySys.mySerialPort.IsOpen)
             {
                 MessageBox.Show("SerialPort is close!");
                 return;
@@ -87,7 +89,7 @@ namespace Auroterm
 
         private void btn_Upgrade_AutoStart_Click(object sender, EventArgs e)
         {
-            if (!SerialPort.IsOpen)
+            if (!mySys.mySerialPort.IsOpen)
             {
                 MessageBox.Show("SerialPort is close!");
                 return;

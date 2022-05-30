@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace Auroterm
 {
+    
     static class Program
     {
         /// <summary>
@@ -14,7 +15,7 @@ namespace Auroterm
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new mainForm());
         }
     }
 }

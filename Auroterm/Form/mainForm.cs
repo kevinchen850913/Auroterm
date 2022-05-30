@@ -11,19 +11,20 @@ using System.Threading;
 
 namespace Auroterm
 {
-    public partial class Form1 : Form
+    public partial class mainForm : Form
     {
-        mySerialPort SerialPort1 = new mySerialPort();
+        mySystem mySys;
 
-        public Form1()
+        public mainForm()
         {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        private void mainForm_Load(object sender, EventArgs e)
         {
-            
+            mySys = new mySystem();
         }
+
         private bool FindForm(string formName)
         {
             bool isFind = false;
@@ -43,7 +44,7 @@ namespace Auroterm
         {
             if (!FindForm("Form_Properties"))
             {
-                Form_Properties FormProperties1 = new Form_Properties();
+                Form_Properties FormProperties1 = new Form_Properties(mySys);
                 FormProperties1.MdiParent = this;
                 FormProperties1.Show();
             }
@@ -53,7 +54,7 @@ namespace Auroterm
         {
             if (!FindForm("Form_SerialPort"))
             {
-                Form_SerialPort FormSerialPort1 = new Form_SerialPort();
+                Form_SerialPort FormSerialPort1 = new Form_SerialPort(mySys);
                 FormSerialPort1.MdiParent = this;
                 FormSerialPort1.Show();
             }
@@ -63,7 +64,7 @@ namespace Auroterm
         {
             if (!FindForm("Form_MCT8132P"))
             {
-                Form_MCT8132P FormTable_MCT8132P1 = new Form_MCT8132P();
+                Form_MCT8132P FormTable_MCT8132P1 = new Form_MCT8132P(mySys);
                 FormTable_MCT8132P1.MdiParent = this;
                 FormTable_MCT8132P1.Show();
             }
@@ -73,7 +74,7 @@ namespace Auroterm
         {
             if (!FindForm("Form_ToolBox"))
             {
-                Form_ToolBox FormToolBox1 = new Form_ToolBox();
+                Form_ToolBox FormToolBox1 = new Form_ToolBox(mySys);
                 FormToolBox1.MdiParent = this;
                 FormToolBox1.Show();
             }
@@ -81,18 +82,7 @@ namespace Auroterm
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(SerialPort.Trigger_Open)
-            {
-                SerialPort1.Auroterm_Open(SerialPort.PortName);
-                SerialPort.Trigger_Open = false;
-                SerialPort.IsOpen = SerialPort1.IsOpen;
-            }
-            if (SerialPort.Trigger_Close)
-            {
-                SerialPort1.Close();
-                SerialPort.Trigger_Close = false;
-                SerialPort.IsOpen = SerialPort1.IsOpen;
-            }
+
         }
     }
 }

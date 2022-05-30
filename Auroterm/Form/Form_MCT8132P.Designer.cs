@@ -127,7 +127,7 @@
             this.tableLayoutPanel9.Controls.Add(this.label10, 0, 2);
             this.tableLayoutPanel9.Controls.Add(this.label9, 0, 1);
             this.tableLayoutPanel9.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel9.Location = new System.Drawing.Point(6, 25);
+            this.tableLayoutPanel9.Location = new System.Drawing.Point(6, 29);
             this.tableLayoutPanel9.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tableLayoutPanel9.Name = "tableLayoutPanel9";
             this.tableLayoutPanel9.RowCount = 7;
@@ -138,61 +138,61 @@
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
             this.tableLayoutPanel9.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 14.28571F));
-            this.tableLayoutPanel9.Size = new System.Drawing.Size(410, 240);
+            this.tableLayoutPanel9.Size = new System.Drawing.Size(410, 236);
             this.tableLayoutPanel9.TabIndex = 0;
             // 
             // tb_WriteDCMlogfile
             // 
             this.tb_WriteDCMlogfile.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_WriteDCMlogfile.Location = new System.Drawing.Point(211, 209);
+            this.tb_WriteDCMlogfile.Location = new System.Drawing.Point(211, 203);
             this.tb_WriteDCMlogfile.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_WriteDCMlogfile.Name = "tb_WriteDCMlogfile";
-            this.tb_WriteDCMlogfile.Size = new System.Drawing.Size(193, 27);
+            this.tb_WriteDCMlogfile.Size = new System.Drawing.Size(193, 31);
             this.tb_WriteDCMlogfile.TabIndex = 12;
             // 
             // tb_myAppWorkPd
             // 
             this.tb_myAppWorkPd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_myAppWorkPd.Location = new System.Drawing.Point(211, 175);
+            this.tb_myAppWorkPd.Location = new System.Drawing.Point(211, 170);
             this.tb_myAppWorkPd.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_myAppWorkPd.Name = "tb_myAppWorkPd";
-            this.tb_myAppWorkPd.Size = new System.Drawing.Size(193, 27);
+            this.tb_myAppWorkPd.Size = new System.Drawing.Size(193, 31);
             this.tb_myAppWorkPd.TabIndex = 11;
             // 
             // tb_JOB_CycleTime
             // 
             this.tb_JOB_CycleTime.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_JOB_CycleTime.Location = new System.Drawing.Point(211, 141);
+            this.tb_JOB_CycleTime.Location = new System.Drawing.Point(211, 137);
             this.tb_JOB_CycleTime.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_JOB_CycleTime.Name = "tb_JOB_CycleTime";
-            this.tb_JOB_CycleTime.Size = new System.Drawing.Size(193, 27);
+            this.tb_JOB_CycleTime.Size = new System.Drawing.Size(193, 31);
             this.tb_JOB_CycleTime.TabIndex = 10;
             // 
             // tb_JOB_SendAcycFrames
             // 
             this.tb_JOB_SendAcycFrames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_JOB_SendAcycFrames.Location = new System.Drawing.Point(211, 107);
+            this.tb_JOB_SendAcycFrames.Location = new System.Drawing.Point(211, 104);
             this.tb_JOB_SendAcycFrames.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_JOB_SendAcycFrames.Name = "tb_JOB_SendAcycFrames";
-            this.tb_JOB_SendAcycFrames.Size = new System.Drawing.Size(193, 27);
+            this.tb_JOB_SendAcycFrames.Size = new System.Drawing.Size(193, 31);
             this.tb_JOB_SendAcycFrames.TabIndex = 9;
             // 
             // tb_JOB_MasterTimer
             // 
             this.tb_JOB_MasterTimer.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_JOB_MasterTimer.Location = new System.Drawing.Point(211, 73);
+            this.tb_JOB_MasterTimer.Location = new System.Drawing.Point(211, 71);
             this.tb_JOB_MasterTimer.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_JOB_MasterTimer.Name = "tb_JOB_MasterTimer";
-            this.tb_JOB_MasterTimer.Size = new System.Drawing.Size(193, 27);
+            this.tb_JOB_MasterTimer.Size = new System.Drawing.Size(193, 31);
             this.tb_JOB_MasterTimer.TabIndex = 8;
             // 
             // tb_JOB_SendAllCycFrames
             // 
             this.tb_JOB_SendAllCycFrames.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_JOB_SendAllCycFrames.Location = new System.Drawing.Point(211, 39);
+            this.tb_JOB_SendAllCycFrames.Location = new System.Drawing.Point(211, 38);
             this.tb_JOB_SendAllCycFrames.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_JOB_SendAllCycFrames.Name = "tb_JOB_SendAllCycFrames";
-            this.tb_JOB_SendAllCycFrames.Size = new System.Drawing.Size(193, 27);
+            this.tb_JOB_SendAllCycFrames.Size = new System.Drawing.Size(193, 31);
             this.tb_JOB_SendAllCycFrames.TabIndex = 7;
             // 
             // tb_JOB_ProcessAllRxFrames
@@ -201,17 +201,17 @@
             this.tb_JOB_ProcessAllRxFrames.Location = new System.Drawing.Point(211, 5);
             this.tb_JOB_ProcessAllRxFrames.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_JOB_ProcessAllRxFrames.Name = "tb_JOB_ProcessAllRxFrames";
-            this.tb_JOB_ProcessAllRxFrames.Size = new System.Drawing.Size(193, 27);
+            this.tb_JOB_ProcessAllRxFrames.Size = new System.Drawing.Size(193, 31);
             this.tb_JOB_ProcessAllRxFrames.TabIndex = 2;
             // 
             // label8
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(6, 9);
+            this.label8.Location = new System.Drawing.Point(6, 0);
             this.label8.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(193, 16);
+            this.label8.Size = new System.Drawing.Size(193, 33);
             this.label8.TabIndex = 0;
             this.label8.Text = "JOB_ProcessAllRxFrames";
             // 
@@ -219,10 +219,10 @@
             // 
             this.label14.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(6, 214);
+            this.label14.Location = new System.Drawing.Point(6, 207);
             this.label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(193, 16);
+            this.label14.Size = new System.Drawing.Size(193, 20);
             this.label14.TabIndex = 6;
             this.label14.Text = "WriteDCMlogfile";
             // 
@@ -230,10 +230,10 @@
             // 
             this.label13.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(6, 179);
+            this.label13.Location = new System.Drawing.Point(6, 171);
             this.label13.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(193, 16);
+            this.label13.Size = new System.Drawing.Size(193, 20);
             this.label13.TabIndex = 5;
             this.label13.Text = "myAppWorkPd";
             // 
@@ -241,10 +241,10 @@
             // 
             this.label12.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(6, 145);
+            this.label12.Location = new System.Drawing.Point(6, 138);
             this.label12.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(193, 16);
+            this.label12.Size = new System.Drawing.Size(193, 20);
             this.label12.TabIndex = 4;
             this.label12.Text = "JOB_CycleTime";
             // 
@@ -252,10 +252,10 @@
             // 
             this.label11.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(6, 111);
+            this.label11.Location = new System.Drawing.Point(6, 105);
             this.label11.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(193, 16);
+            this.label11.Size = new System.Drawing.Size(193, 20);
             this.label11.TabIndex = 3;
             this.label11.Text = "JOB_SendAcycFrames";
             // 
@@ -263,10 +263,10 @@
             // 
             this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(6, 77);
+            this.label10.Location = new System.Drawing.Point(6, 72);
             this.label10.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(193, 16);
+            this.label10.Size = new System.Drawing.Size(193, 20);
             this.label10.TabIndex = 2;
             this.label10.Text = "JOB_MasterTimer";
             // 
@@ -274,10 +274,10 @@
             // 
             this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(6, 43);
+            this.label9.Location = new System.Drawing.Point(6, 33);
             this.label9.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(193, 16);
+            this.label9.Size = new System.Drawing.Size(193, 33);
             this.label9.TabIndex = 1;
             this.label9.Text = "JOB_SendAllCycFrames";
             // 
@@ -304,53 +304,53 @@
             this.tableLayoutPanel3.Controls.Add(this.label5, 0, 1);
             this.tableLayoutPanel3.Controls.Add(this.tb_Isstop, 1, 1);
             this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 25);
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(6, 29);
             this.tableLayoutPanel3.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tableLayoutPanel3.Name = "tableLayoutPanel3";
             this.tableLayoutPanel3.RowCount = 2;
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(410, 80);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(410, 76);
             this.tableLayoutPanel3.TabIndex = 1;
             // 
             // label18
             // 
             this.label18.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 12);
+            this.label18.Location = new System.Drawing.Point(6, 9);
             this.label18.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(113, 16);
+            this.label18.Size = new System.Drawing.Size(137, 20);
             this.label18.TabIndex = 2;
             this.label18.Text = "EtherCATMaster";
             // 
             // tb_EtherCATMaster
             // 
             this.tb_EtherCATMaster.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_EtherCATMaster.Location = new System.Drawing.Point(211, 6);
+            this.tb_EtherCATMaster.Location = new System.Drawing.Point(211, 5);
             this.tb_EtherCATMaster.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_EtherCATMaster.Name = "tb_EtherCATMaster";
-            this.tb_EtherCATMaster.Size = new System.Drawing.Size(193, 27);
+            this.tb_EtherCATMaster.Size = new System.Drawing.Size(193, 31);
             this.tb_EtherCATMaster.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 52);
+            this.label5.Location = new System.Drawing.Point(6, 47);
             this.label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(193, 16);
+            this.label5.Size = new System.Drawing.Size(193, 20);
             this.label5.TabIndex = 1;
             this.label5.Text = "Stop";
             // 
             // tb_Isstop
             // 
             this.tb_Isstop.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_Isstop.Location = new System.Drawing.Point(211, 46);
+            this.tb_Isstop.Location = new System.Drawing.Point(211, 43);
             this.tb_Isstop.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_Isstop.Name = "tb_Isstop";
-            this.tb_Isstop.Size = new System.Drawing.Size(193, 27);
+            this.tb_Isstop.Size = new System.Drawing.Size(193, 31);
             this.tb_Isstop.TabIndex = 0;
             // 
             // groupBox6
@@ -378,24 +378,24 @@
             this.tableLayoutPanel10.Controls.Add(this.tb_PerfMsmt_APP, 1, 1);
             this.tableLayoutPanel10.Controls.Add(this.tb_PerfMsmt_EtherCAT, 1, 2);
             this.tableLayoutPanel10.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 25);
+            this.tableLayoutPanel10.Location = new System.Drawing.Point(6, 29);
             this.tableLayoutPanel10.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tableLayoutPanel10.Name = "tableLayoutPanel10";
             this.tableLayoutPanel10.RowCount = 3;
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
             this.tableLayoutPanel10.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 33.33333F));
-            this.tableLayoutPanel10.Size = new System.Drawing.Size(410, 110);
+            this.tableLayoutPanel10.Size = new System.Drawing.Size(410, 106);
             this.tableLayoutPanel10.TabIndex = 0;
             // 
             // label15
             // 
             this.label15.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(6, 10);
+            this.label15.Location = new System.Drawing.Point(6, 7);
             this.label15.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(193, 16);
+            this.label15.Size = new System.Drawing.Size(193, 20);
             this.label15.TabIndex = 0;
             this.label15.Text = "MCU";
             // 
@@ -403,10 +403,10 @@
             // 
             this.label16.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(6, 46);
+            this.label16.Location = new System.Drawing.Point(6, 42);
             this.label16.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(193, 16);
+            this.label16.Size = new System.Drawing.Size(193, 20);
             this.label16.TabIndex = 1;
             this.label16.Text = "APP";
             // 
@@ -414,10 +414,10 @@
             // 
             this.label17.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 83);
+            this.label17.Location = new System.Drawing.Point(6, 78);
             this.label17.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(193, 16);
+            this.label17.Size = new System.Drawing.Size(193, 20);
             this.label17.TabIndex = 2;
             this.label17.Text = "EtherCAT";
             // 
@@ -427,25 +427,25 @@
             this.tb_PerfMsmt_MCU.Location = new System.Drawing.Point(211, 5);
             this.tb_PerfMsmt_MCU.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_PerfMsmt_MCU.Name = "tb_PerfMsmt_MCU";
-            this.tb_PerfMsmt_MCU.Size = new System.Drawing.Size(193, 27);
+            this.tb_PerfMsmt_MCU.Size = new System.Drawing.Size(193, 31);
             this.tb_PerfMsmt_MCU.TabIndex = 3;
             // 
             // tb_PerfMsmt_APP
             // 
             this.tb_PerfMsmt_APP.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_PerfMsmt_APP.Location = new System.Drawing.Point(211, 41);
+            this.tb_PerfMsmt_APP.Location = new System.Drawing.Point(211, 40);
             this.tb_PerfMsmt_APP.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_PerfMsmt_APP.Name = "tb_PerfMsmt_APP";
-            this.tb_PerfMsmt_APP.Size = new System.Drawing.Size(193, 27);
+            this.tb_PerfMsmt_APP.Size = new System.Drawing.Size(193, 31);
             this.tb_PerfMsmt_APP.TabIndex = 4;
             // 
             // tb_PerfMsmt_EtherCAT
             // 
             this.tb_PerfMsmt_EtherCAT.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.tb_PerfMsmt_EtherCAT.Location = new System.Drawing.Point(211, 77);
+            this.tb_PerfMsmt_EtherCAT.Location = new System.Drawing.Point(211, 75);
             this.tb_PerfMsmt_EtherCAT.Margin = new System.Windows.Forms.Padding(6, 5, 6, 5);
             this.tb_PerfMsmt_EtherCAT.Name = "tb_PerfMsmt_EtherCAT";
-            this.tb_PerfMsmt_EtherCAT.Size = new System.Drawing.Size(193, 27);
+            this.tb_PerfMsmt_EtherCAT.Size = new System.Drawing.Size(193, 31);
             this.tb_PerfMsmt_EtherCAT.TabIndex = 5;
             // 
             // timer1
@@ -455,7 +455,7 @@
             // 
             // Form_MCT8132P
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(444, 561);
             this.Controls.Add(this.tableLayoutPanel13);

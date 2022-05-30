@@ -53,11 +53,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form\Form1.cs">
+    <Compile Include="Form\mainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form\Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Form\mainForm.Designer.cs">
+      <DependentUpon>mainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Form\Form_Properties.cs">
       <SubType>Form</SubType>
@@ -77,6 +77,7 @@
     <Compile Include="Form\Form_ToolBox.Designer.cs">
       <DependentUpon>Form_ToolBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="mySystem.cs" />
     <Compile Include="Table_MCT8132P.cs" />
     <Compile Include="Form\Form_MCT8132P.cs">
       <SubType>Form</SubType>
@@ -86,9 +87,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Form\Form1.resx">
+    <EmbeddedResource Include="Form\mainForm.resx">
       <SubType>Designer</SubType>
-      <DependentUpon>Form1.cs</DependentUpon>
+      <DependentUpon>mainForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form\Form_Properties.resx">
       <SubType>Designer</SubType>
@@ -126,7 +127,6 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="SerialPort.cs">
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="ToolBox.cs" />
   </ItemGroup>

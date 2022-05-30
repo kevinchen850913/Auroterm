@@ -11,10 +11,11 @@ namespace Auroterm
 {
     public partial class Form_Properties : Form
     {
-        
-        public Form_Properties()
+        mySystem mySys;
+        public Form_Properties(mySystem m_mySys)
         {
             InitializeComponent();
+            mySys = m_mySys;
         }
 
         private void Form_Properties_Load(object sender, EventArgs e)
@@ -23,37 +24,37 @@ namespace Auroterm
             {
                 cmb_PortName.Items.Add(Name);
             }
-            cmb_PortName.SelectedItem = SerialPort.PortName;
+            cmb_PortName.SelectedItem = mySys.mySerialPort.PortName;
         }
 
         private void bt_textBoxFont_Click(object sender, EventArgs e)
         {
-            FontDialog dlg = new FontDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                SerialPort.font = dlg.Font;
-                SerialPort.Trigger_Font = true;
-            }  
+            //FontDialog dlg = new FontDialog();
+            //if (dlg.ShowDialog() == DialogResult.OK)
+            //{
+            //    SerialPort.font = dlg.Font;
+            //    SerialPort.Trigger_Font = true;
+            //}  
         }
 
         private void bt_textBoxForeColor_Click(object sender, EventArgs e)
         {
-            ColorDialog dlg = new ColorDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                SerialPort.ForeColor = dlg.Color;
-                SerialPort.Trigger_ForeColor = true;
-            }
+            //ColorDialog dlg = new ColorDialog();
+            //if (dlg.ShowDialog() == DialogResult.OK)
+            //{
+            //    SerialPort.ForeColor = dlg.Color;
+            //    SerialPort.Trigger_ForeColor = true;
+            //}
         }
 
         private void bt_textBoxBackColor_Click(object sender, EventArgs e)
         {
-            ColorDialog dlg = new ColorDialog();
-            if (dlg.ShowDialog() == DialogResult.OK)
-            {
-                SerialPort.BackColor = dlg.Color;
-                SerialPort.Trigger_BackColor = true;
-            }
+            //ColorDialog dlg = new ColorDialog();
+            //if (dlg.ShowDialog() == DialogResult.OK)
+            //{
+            //    SerialPort.BackColor = dlg.Color;
+            //    SerialPort.Trigger_BackColor = true;
+            //}
         }
 
         private void cmb_PortName_SelectedIndexChanged(object sender, EventArgs e)
@@ -63,18 +64,17 @@ namespace Auroterm
 
         private void bt_SerialPort_Open_Click(object sender, EventArgs e)
         {
-            SerialPort.PortName = cmb_PortName.SelectedItem.ToString();
-            SerialPort.Trigger_Open = true;
+            mySys.SerialPort_Open(cmb_PortName.SelectedItem.ToString());
         }
 
         private void bt_SerialPort_Close_Click(object sender, EventArgs e)
         {
-            SerialPort.Trigger_Close = true;
+            mySys.mySerialPort.Close();
         }
 
         private void bt_Clear_Click(object sender, EventArgs e)
         {
-            SerialPort.Clear();
+            mySys.mySerialPortText = "";
         }
 
         private void bt_FileSave_Click(object sender, EventArgs e)
@@ -87,7 +87,7 @@ namespace Auroterm
             {
                 using (StreamWriter sw = new StreamWriter(sfd.FileName))
                 {
-                    sw.Write(SerialPort.Text);
+                    sw.Write(mySys.mySerialPortText);
                 }
             }
         }
